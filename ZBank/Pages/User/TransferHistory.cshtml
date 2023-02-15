@@ -1,0 +1,31 @@
+﻿@page
+@model ZBank.Pages.User.TransferHistoryModel
+@{
+}
+<a class="nav-link text-dark btn btn-primary" asp-area="" asp-page="/Index">Back to Home</a>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">Transaction Id</th>
+            <th scope="col">Amount</th>
+            <th scope="col">To Payee</th>
+            <th scope="col">Type</th>
+            <th scope="col">Date</th>
+            <th scope="col">Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var transaction in Model.Transactions)
+        {
+            <tr>
+                <th scope="row"><a asp-page="TransferDetail" asp-route-transactionId="@transaction.TransactionId">@transaction.TransactionId</a> </th>
+                <td>@transaction.Amount</td>
+                <td>@transaction.ToPayee</td>
+                <td>@transaction.Type</td>
+                <td>@transaction.Status</td>
+                <td>@transaction.Date</td>
+            </tr>
+        }
+    </tbody>
+</table>

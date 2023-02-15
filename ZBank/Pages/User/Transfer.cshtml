@@ -1,0 +1,48 @@
+﻿@page
+@model ZBank.Pages.User.TransferModel
+@{
+}
+
+
+<div class="row">
+    <a class="nav-link text-dark btn btn-primary" asp-area="" asp-page="/Index">Back to Home</a>
+    <form id="registerForm" method="post">
+
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Your Account Balance</h5>
+                <h6 class="card-subtitle mb-2 text-muted">$@Model.Input.AccountBalance.ToString("0.00")</h6>
+            </div>
+        </div>
+
+        <h2>Transfer Balance</h2>
+        <hr />
+        <div asp-validation-summary="All" class="text-danger"></div>
+
+
+        <div class="form-floating">
+            <input asp-for="Input.Amount" class="form-control" aria-required="true" />
+            <label asp-for="Input.Amount"></label>
+        </div>
+
+        <div class="form-floating">
+            <input asp-for="Input.ToBankName" class="form-control" aria-required="true" />
+            <label asp-for="Input.ToBankName"></label>
+        </div>
+
+        <div class="form-floating">
+            <input asp-for="Input.ToBankAccountNo" class="form-control" aria-required="true" />
+            <label asp-for="Input.ToBankAccountNo"></label>
+        </div>
+
+        <div class="form-floating">
+            <input asp-for="Input.PayeeName" class="form-control" aria-required="true" />
+            <label asp-for="Input.PayeeName"></label>
+        </div>
+        <div class="form-floating">
+            <input asp-for="Input.PayeePhone" class="form-control" aria-required="true" />
+            <label asp-for="Input.PayeePhone"></label>
+        </div>
+        <button id="registerSubmit" type="submit" class="w-100 btn btn-lg btn-primary">Transfer</button>
+    </form>
+</div>

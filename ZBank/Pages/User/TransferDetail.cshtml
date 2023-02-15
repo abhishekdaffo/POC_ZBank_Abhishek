@@ -1,0 +1,19 @@
+﻿@page "{transactionId}"
+@model ZBank.Pages.User.TransferDetailModel
+@{
+}
+
+<div class="card">
+    <div class="card-body">
+        <h6 class="card-subtitle mb-2 text-muted">TransactionId : @Model.Transaction.TransactionId</h6>
+        <h6 class="card-subtitle mb-2 text-muted">Payee Name : @Model.Transaction.ToPayee</h6>
+        <h6 class="card-subtitle mb-2 text-muted">Payee Phone Number : @Model.Transaction.ToPayeePhone</h6>
+        <h6 class="card-subtitle mb-2 text-muted">Payee Bank : @Model.Transaction.BankName</h6>
+        <h6 class="card-subtitle mb-2 text-muted">Payee Bank Account Number : @Model.Transaction.BankAccountNo</h6>
+        <h6 class="card-subtitle mb-2 text-muted">Amount : $@Model.Transaction.Amount</h6>
+        <h6 class="card-subtitle mb-2 text-muted">Type : @Model.Transaction.Type</h6>
+        <h6 class="card-subtitle mb-2 text-muted">Date : @Model.Transaction.Date</h6>
+        <h6 class="card-subtitle mb-2 text-muted">Status : @Model.Transaction.Status</h6>
+
+    </div>
+</div>
