@@ -10,9 +10,7 @@ STEPS TO SETUP DB<br />
   	Update-Database<br /><br />
     
 FOR LOGIN<br />
-•	You can use abhishek1@test.com | test123<br />
-OR<br />
-•	You can also register as a new user and test for same<br />
+•	You can register as a new user and test for same<br />
 
 SOME Defaults<br />
 •	By default we are adding $5000 for demo to every new created user<br />
